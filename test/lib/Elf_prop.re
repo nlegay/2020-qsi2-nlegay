@@ -19,15 +19,15 @@ describe("Elf Invariance", ({test}) => {
       |> expect.ext.qCheckTest;
       ();
     })
-    /* test("The value of a High elf must be an even number", ({expect}) => {
-         QCheck.Test.make(
-           ~count=1000,
-           ~name="The value of a High elf must be an even number",
-           elf_high_arbitrary,
-           elf =>
-           value(elf) mod 2 === 0
-         )
-         |> expect.ext.qCheckTest;
-         ();
-       }); */
+    test("The value of a High elf must be an even number", ({expect}) => {
+      QCheck.Test.make(
+        ~count=1000,
+        ~name="The value of a High elf must be an even number",
+        elf_high_arbitrary,
+        elf =>
+        value(elf) mod 2 === 0
+      )
+      |> expect.ext.qCheckTest;
+      ();
+    }); 
 });
